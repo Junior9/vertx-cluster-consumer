@@ -27,5 +27,12 @@ public class MainVertxCluster extends AbstractVerticle {
     		
     	}).listen(8080);
     }
-
 }
+
+/*
+ * ==>Project with eventBus Consumer <===
+mvn io.fabric8:vertx-maven-plugin:1.0.5:setup -DprojectGroupId=chaos.vertx.event.bus -DprojectArtifactId=cluster-micro2 -Dverticle=chaos.vertx.MainVertxCluster -Ddependencies=infinispan,rx
+ ==> Command to run consumer
+ mvn compile vertx:run -Dvertx.runArgs="-cluster -Djava.net.preferIPv4Stack=true"
+
+ * */
